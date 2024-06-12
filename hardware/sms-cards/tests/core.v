@@ -22,14 +22,14 @@ module ibm1620_core_test1;
         .d(c)
     );
 
-    wire j0, j1;
+    wire j0_a, j1;
 
     IBM_SMS_TAJ C_B1A16(
         .q(c),
         .d(c),
         .c(1'bz),
-        .r(j0),
-        .p(j0),
+        .r(j0_a),
+        .p(j0_a),
         .b(j1),
         .a(j1)
     );
@@ -37,7 +37,7 @@ module ibm1620_core_test1;
     initial begin 
 
         $monitor("MON: [%0t] clk: %0d p: %0d, b: %0d", 
-            $time, c, j0, j1);
+            $time, c, j0_a, j1);
 
         #10 $stop;
 

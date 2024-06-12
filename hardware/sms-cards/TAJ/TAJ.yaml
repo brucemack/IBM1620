@@ -6,37 +6,37 @@ description: "SDTRL-Trigger, Binary"
 function: "AC Coupled RS Flip-Flop"
 pins:
   A:
-    type: UNKNOWN
+    type: INPUT
     name: "GR1"
   B:
-    type: UNKNOWN
+    type: OUTPUT
     name: "Q"
   C:
-    type: UNKNOWN
+    type: INPUT
     name: "*R"
   D:
-    type: UNKNOWN
+    type: INPUT
     name: "PR1"
   E:
-    type: UNKNOWN
+    type: INPUT
     name: "GR2"
   F:
-    type: UNKNOWN
+    type: INPUT
     name: "PR2"
   G:
-    type: UNKNOWN
+    type: INPUT
     name: "RR1"
   H:
-    type: UNKNOWN
+    type: INPUT
     name: "*S"
   J:
     type: GND
     name: "GND"
   K:
-    type: UNKNOWN
+    type: INPUT
     name: "GS2"
   L:
-    type: UNKNOWN
+    type: INPUT
     name: "PS2"
   M:
     type: VN12
@@ -45,11 +45,11 @@ pins:
     type: VP12
     name: "+12VM"
   P:
-    type: UNKNOWN
+    type: OUTPUT
     name: "*Q"
   Q:
-    type: UNKNOWN
+    type: INPUT
     name: "PS1"
   R:
-    type: UNKNOWN
+    type: INPUT
     name: "GS1"

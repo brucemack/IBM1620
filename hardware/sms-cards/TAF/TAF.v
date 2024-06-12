@@ -11,7 +11,7 @@
 //
 // We may need to revisit this.
 
-module  IBM_SMS_TAF(
+module  SMS_CARD_TAF(
     output c, 
     output d
     );

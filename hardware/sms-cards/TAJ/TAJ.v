@@ -7,7 +7,7 @@
 // 
 // Pin G is not implemented!
 
-module  IBM_SMS_TAJ(
+module  SMS_CARD_TAJ(
     input a,
     input c,
     input d,
