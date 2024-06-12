@@ -17,14 +17,14 @@ module ibm1620_core_test1;
     //wire q = 1'bz;
     //wire r = 1'bz;
 
-    IBM_SMS_TAF C_B1A15(
+    SMS_CARD_TAF C_B1A15(
         .c(c),
         .d(c)
     );
 
     wire j0_a, j1;
 
-    IBM_SMS_TAJ C_B1A16(
+    SMS_CARD_TAJ C_B1A16(
         .q(c),
         .d(c),
         .c(1'bz),
