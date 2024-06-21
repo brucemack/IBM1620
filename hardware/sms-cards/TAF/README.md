@@ -1,7 +1,3 @@
----
-title: SMS Card - TAF
-layout: page
----
 _(In-depth documentation of this interesting card for illustrative purposes.)_
 
 [SMS Card Database Entry](https://static.righto.com/sms/TAF.html)

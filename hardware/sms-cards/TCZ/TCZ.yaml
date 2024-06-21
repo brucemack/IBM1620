@@ -6,37 +6,37 @@ description: "SDTRL-Modified MUP Number 12"
 function: "Dual Buffered RS Flip-Flop w/Common Reset"
 pins:
   A:
-    type: UNKNOWN
+    type: INPUT
     name: "*S2"
   B:
-    type: UNKNOWN
+    type: OUTPUT
     name: "Q1"
   C:
-    type: UNKNOWN
+    type: OUTPUT
     name: "*Q1"
   D:
-    type: UNKNOWN
+    type: OUTPUT
     name: "*Q2"
   E:
-    type: UNKNOWN
+    type: OUTPUT
     name: "Q2"
   F:
-    type: UNKNOWN
+    type: OUTPUT
     name: "Q2U"
   G:
-    type: UNKNOWN
+    type: INPUT
     name: "*S2"
   H:
-    type: UNKNOWN
+    type: INPUT
     name: "*R2"
   J:
     type: GND
     name: "GND"
   K:
-    type: UNKNOWN
+    type: INPUT
     name: "*S1"
   L:
-    type: UNKNOWN
+    type: INPUT
     name: "*S1"
   M:
     type: VN12
@@ -45,11 +45,11 @@ pins:
     type: VP12
     name: "+12VM"
   P:
-    type: UNKNOWN
+    type: OUTPUT
     name: "Q1U"
   Q:
-    type: UNKNOWN
+    type: INPUT
     name: "*R1"
   R:
-    type: UNKNOWN
+    type: INPUT
     name: "*R"

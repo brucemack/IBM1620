@@ -30,8 +30,6 @@ module  SMS_CARD_TAG(
     assign c = !(e & f);
     assign k = !(q & r);
     assign p = !(a & h);
-    // ASSUMING A SHORT HERE!
-    assign l = p;
 
 endmodule
 
