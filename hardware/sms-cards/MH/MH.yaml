@@ -4,40 +4,42 @@
 code: MH
 description: "CTRL- Inverter, Power - PNP"
 function: "Quad Inverter"
+smsdb: https://static.righto.com/sms/MH.html
 pins:
   A:
     type: OUTPUT
-    name: "O4"
-  B:
-    type: INPUT
-    name: "I3"
+    drivetype: AH_PD
+    cir: 4
   C:
-    type: OUTPUT
-    name: "O3R"
+    type: PASSIVE
+    tie: VN12
+    cir: 1
   D:
     type: OUTPUT
     name: "O2"
+    drivetype: AH_PD
+    cir: 2
   E:
     type: OUTPUT
-    name: "O3C"
+    name: "O2"
+    drivetype: AH
+    cir: 3
   F:
     type: INPUT
     name: "I4R"
-  G:
-    type: INPUT
-    name: "I1C"
-  H:
-    type: INPUT
-    name: "I4C"
+    cir: 4
   J:
     type: GND
     name: "GND"
   K:
     type: INPUT
     name: "I1R"
+    cir: 1
   L:
     type: OUTPUT
     name: "O1C"
+    drivetype: AH
+    cir: 1
   M:
     type: VN12
     name: "-12V"
@@ -46,10 +48,10 @@ pins:
     name: "+12VM"
   P:
     type: INPUT
-    name: "I2R"
-  Q:
-    type: INPUT
-    name: "I2C"
+    name: "P"
+    cir: 2
   R:
-    type: OUTPUT
-    name: "O1R"
+    type: PASSIVE
+    tie: VN12
+    cir: 1
+    

@@ -8,36 +8,50 @@ pins:
   A:
     type: INPUT
     name: "I1"
+    cir: 1
   B:
     type: INPUT
     name: "I1"
+    cir: 1
   C:
     type: OUTPUT
     name: "O2C"
+    cir: 2
+    drivetype: AH
+    note: "No pull down on this circuit"
   D:
     type: OUTPUT
     name: "O3"
+    cir: 3
+    drivetype: AH_PD
   E:
     type: OUTPUT
     name: "O1"
+    cir: 1
+    drivetype: AH_PD
   F:
     type: INPUT
     name: "I2"
+    cir: 2
   G:
     type: INPUT
     name: "I2"
+    cir: 2
   H:
     type: INPUT
     name: "I2"
+    cir: 2
   J:
     type: GND
     name: "GND"
   K:
     type: INPUT
     name: "I1"
+    cir: 1
   L:
-    type: OUTPUT
+    type: PASSIVE
     name: "O2R"
+    cir: 2
   M:
     type: VN12
     name: "-12V"
@@ -47,9 +61,12 @@ pins:
   P:
     type: INPUT
     name: "I3"
+    cir: 3
   Q:
     type: INPUT
     name: "I3"
+    cir: 3
   R:
     type: INPUT
     name: "I3"
+    cir: 3

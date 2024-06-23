@@ -1,8 +1,12 @@
 module SMS_CARD_CEYB(
     input b,
     input c,
+    input f,
+    input l,
     output g,
-    output p
+    output p,
+    output h,
+    output e
     );
 
     // This is an emitter follower with the collector
@@ -11,7 +15,10 @@ module SMS_CARD_CEYB(
     //    emitter is floating.
     // 2. When the input is low, the transistor is on and the emitter is tied 
     //    to -12.
-    assign g = (b == 1) ? 1'bz : 0;
-    assign p = (c == 1) ? 1'bz : 0;
+    assign g = (b === 0) ? 0 : 1'bz;
+    assign p = (c === 0) ? 0 : 1'bz;
+    assign h = (f === 0) ? 0 : 1'bz;
+    // This transistor has a pull-up
+    assign e = (l === 0) ? 0 : 1;
     
 endmodule 

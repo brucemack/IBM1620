@@ -29,9 +29,12 @@ endmodule
 
 // A special function that holds low for one cycle at startup
 // and then releases to 1.
+// Pin A is active low (-RESET) and pin B is active high (+RESET)
 module SMS_CARD_RST(
-    output reg a
+    output reg a,
+    output b
     );
+    assign b = !a;
     // Reset signals starts low
     initial begin
         a = 0;

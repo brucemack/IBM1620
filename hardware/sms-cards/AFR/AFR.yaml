@@ -11,6 +11,7 @@ pins:
   B:
     type: OUTPUT
     name: "O1"
+    drivertype: AH
   C:
     type: INPUT
     name: "I5"
@@ -23,21 +24,25 @@ pins:
   F:
     type: OUTPUT
     name: "O2"
+    drivertype: AH
   G:
     type: INPUT
     name: "I6"
   H:
     type: OUTPUT
     name: "O6"
+    drivertype: AH
   J:
     type: GND
     name: "GND"
   K:
     type: OUTPUT
     name: "O4"
+    drivertype: AH
   L:
     type: OUTPUT
     name: "O5"
+    drivertype: AH
   M:
     type: NC
     name: ""
@@ -50,6 +55,7 @@ pins:
   Q:
     type: OUTPUT
     name: "O3"
+    drivertype: AH
   R:
     type: INPUT
     name: "I4"

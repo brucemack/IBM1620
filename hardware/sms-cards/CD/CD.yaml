@@ -4,31 +4,44 @@
 code: CD
 description: "CTRL-Inverter \"N\" Type"
 function: "Triple 3 Input NAND"
+smsdb: https://static.righto.com/sms/CD.html
 pins:
   A:
     type: INPUT
     name: "I1"
+    cir: 1
   B:
     type: INPUT
     name: "I1"
+    cir: 1
   C:
     type: OUTPUT
     name: "O2C"
+    note: "No pull down resistor, open collector (see pin L)"
+    drivetype: AH
+    cir: 2
   D:
     type: OUTPUT
     name: "O3"
+    drivetype: AH_PD
+    cir: 3
   E:
     type: OUTPUT
     name: "O1"
+    drivetype: AH_PD
+    cir: 1
   F:
     type: INPUT
     name: "I2"
+    cir: 2
   G:
     type: INPUT
     name: "I2"
+    cir: 2
   H:
     type: INPUT
     name: "I2"
+    cir: 2
   J:
     type: GND
     name: "GND"
@@ -36,8 +49,9 @@ pins:
     type: INPUT
     name: "I1"
   L:
-    type: OUTPUT
+    type: PASSIVE
     name: "O2R"
+    cir: 2
   M:
     type: VN12
     name: "-12V"
@@ -47,9 +61,12 @@ pins:
   P:
     type: INPUT
     name: "I3"
+    cir: 3
   Q:
     type: INPUT
     name: "I3"
+    cir: 3
   R:
     type: INPUT
     name: "I3"
+    cir: 3

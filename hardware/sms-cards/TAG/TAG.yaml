@@ -4,6 +4,8 @@
 code: TAG
 description: "SDTRL-2Way Inverter"
 function: "Quad 2 Input NAND"
+smsdb: https://static.righto.com/sms/TAG.html
+
 pins:
   A:
     type: INPUT
@@ -14,6 +16,7 @@ pins:
   C:
     type: OUTPUT
     name: "O3"
+    drivetype: AH_PD
   D:
     type: INPUT
     name: "I1"
@@ -26,6 +29,7 @@ pins:
   G:
     type: OUTPUT
     name: "O1"
+    drivetype: AH_PD
   H:
     type: INPUT
     name: "I2"
@@ -35,8 +39,10 @@ pins:
   K:
     type: OUTPUT
     name: "O4"
+    drivetype: AH_PD
   L:
-    type: OUTPUT
+    type: PASSIVE
+    tie: VN12
     name: "O2R"
   M:
     type: VN12
@@ -47,6 +53,7 @@ pins:
   P:
     type: OUTPUT
     name: "O2C"
+    drivetype: AH
   Q:
     type: INPUT
     name: "I4"

@@ -1,7 +1,3 @@
----
-title: SMS Card - TAG
-layout: page
----
 _(We provide a more in-depth documentation of this simple card for illustrative purposes.)_
 
 [SMS Card Database Entry](https://static.righto.com/sms/TAG.html)

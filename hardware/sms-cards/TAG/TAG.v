@@ -26,10 +26,18 @@ module  SMS_CARD_TAG(
     input r 
     );
 
-    assign g = !(b & d);
-    assign c = !(e & f);
-    assign k = !(q & r);
-    assign p = !(a & h);
+    function ipu(input x);
+        begin
+            ipu = (x == 1 || x === 1'bz) ? 1 : 0;
+        end
+    endfunction
+
+    assign g = !ipu(b) || !ipu(d);
+    assign c = !ipu(e) || !ipu(f);
+    assign k = !ipu(q) || ipu(r);
+    // NOTE: P is not pulled down (open collector).
+    // If both A and H are high then P is floating
+    assign p = !ipu(a) || !ipu(h) ? 1 : 1'bz;
 
 endmodule
 

@@ -6,39 +6,55 @@ description: "CTRL-Emitter Follower PNP"
 function: "Quad Emitter Follower"
 pins:
   A:
-    type: UNKNOWN
+    type: PASSIVE
+    tie: VP12
     name: "PU1"
+    cir: 1
   B:
     type: INPUT
     name: "I1"
+    cir: 1
   C:
     type: INPUT
     name: "I2"
+    cir: 2
   D:
-    type: UNKNOWN
+    type: PASSIVE
+    tie: VP12
     name: "PDR"
+    cir: 4
   E:
     type: OUTPUT
     name: "O4"
+    drivetype: AL_PU
+    note: "Pulled to +12V via 2.2K resistor"
+    cir: 4
   F:
     type: INPUT
     name: "I3"
+    cir: 3
   G:
     type: OUTPUT
     name: "O1E"
-    multidrive: true
+    drivetype: AL
+    cir: 1
   H:
     type: OUTPUT
     name: "O3E"
+    drivetype: AL
+    cir: 3
   J:
     type: GND
     name: "GND"
   K:
-    type: UNKNOWN
+    type: PASSIVE
+    tie: VP12
     name: "PU2"
+    cir: 2
   L:
     type: INPUT
     name: "I4"
+    cir: 4
   M:
     type: VN12
     name: "-12V"
@@ -48,10 +64,13 @@ pins:
   P:
     type: OUTPUT
     name: "O2E"
-    multidrive: true
+    drivetype: AL
+    cir: 2
   Q:
     type: UNKNOWN
     name: "+12V"
   R:
-    type: UNKNOWN
+    type: PASSIVE
+    tie: VP12
     name: "PU3"
+    cir: 3

@@ -12,11 +12,16 @@ pins:
     type: NC
     name: ""
   C:
-    type: OUTPUT
+    type: PASSIVE
+    tie: NONE
+    warn: "Need to investigate what the pull should be"
     name: "O1R"
   D:
     type: OUTPUT
     name: "O1"
+    drivetype: AH_PD
+    note: "Collector tied to -12 via 430 ohms"
+    warn: "Need to investigate the drive type, but S01 should be fine"
   E:
     type: NC
     name: ""

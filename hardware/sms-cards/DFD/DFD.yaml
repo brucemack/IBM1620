@@ -6,37 +6,37 @@ description: "SDTRL MUP Number 15"
 function: "Dual RS Flip-Flop"
 pins:
   A:
-    type: UNKNOWN
+    type: OUTPUT
     name: "*Q1"
   B:
-    type: UNKNOWN
+    type: INPUT
     name: "*S1"
   C:
-    type: UNKNOWN
+    type: OUTPUT
     name: "Q2"
   D:
-    type: UNKNOWN
+    type: OUTPUT
     name: "*Q2"
   E:
-    type: UNKNOWN
+    type: INPUT
     name: "R1"
   F:
-    type: UNKNOWN
+    type: INPUT
     name: "R1"
   G:
-    type: UNKNOWN
+    type: OUTPUT
     name: "Q1"
   H:
-    type: UNKNOWN
+    type: INPUT
     name: "*R1"
   J:
     type: GND
     name: "GND"
   K:
-    type: UNKNOWN
+    type: INPUT
     name: "*R2"
   L:
-    type: UNKNOWN
+    type: INPUT
     name: "*S2"
   M:
     type: VN12
@@ -45,11 +45,11 @@ pins:
     type: VP12
     name: "+12VM"
   P:
-    type: UNKNOWN
+    type: INPUT
     name: "R2"
   Q:
-    type: UNKNOWN
+    type: INPUT
     name: "R2"
   R:
-    type: UNKNOWN
+    type: INPUT
     name: "R2"
