@@ -19,7 +19,8 @@ module  SMS_CARD_TAJ(
     input q,
     input r,
     output b, 
-    output p
+    output p,
+    input x
     );
 
     wire ac_set_left_0, gate_left_0, ac_set_right_0, gate_right_0;
@@ -40,28 +41,18 @@ module  SMS_CARD_TAJ(
     assign ac_set_right_0 = q;
     assign gate_right_0 = r;
 
-    always @(posedge ac_set_left_0) begin
-        if (gate_left_0 == 1 & state == 1) begin
-            state <= 0;
-        end
-    end
-    always @(posedge ac_set_right_0) begin
-        if (gate_right_0 == 1 & state == 0) begin
-            state <= 1;
-        end
-    end
 
-    always @(posedge reset_left) begin
-        state <= 1;
-    end
-    always @(negedge reset_left) begin
-        state <= 0;
-    end
-    always @(posedge reset_right) begin
-        state <= 0;
-    end
-    always @(negedge reset_right) begin
-        state <= 1;
+    always @(posedge(x)) begin
+        if (reset_left == 0)
+            state <= 1;
+        else if (reset_right == 0)
+            state <= 0;
+        else if ((ac_set_left_0 === 1 & gate_left_0 === 1) |
+                 (ac_set_left_1 === 1 & gate_left_1 === 1))
+            state <= 0;
+        else if ((ac_set_right_0 === 1 & gate_right_0 === 1) |
+                 (ac_set_right_1 === 1 & gate_right_1 === 1))
+            state <= 1;
     end
 
     initial begin 

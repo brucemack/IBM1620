@@ -53,3 +53,5 @@ pins:
   R:
     type: INPUT
     name: "GS1"
+  X: 
+    type: SYSCLOCK

@@ -15,29 +15,41 @@ module SMS_CARD_TCZ(
     input r
     );
 
-    // Only the reset pin r is shared between the circuits
+    function ipu(input x);
+        begin
+            ipu = (x == 1 || x === 1'bz) ? 1 : 0;
+        end
+    endfunction
 
-    // Top circuit
-    wire k_p = (k == 1) | (k === 1'bz);
-    wire l_p = (l == 1) | (l === 1'bz);
-    wire q_p = (q == 1) | (q === 1'bz);
-    wire r_p = (r == 1) | (r === 1'bz);
+    // Curcuit 1
 
-    wire n0 = k_p & l_p & n2;
-    assign p = !n0;
-    wire n2 = !(p & q_p & r_p);
-    assign b = !n2;
-    assign c = !p;
+    reg state_1;
+    assign b = !state_1;
+    assign p = !state_1;
+    assign c = state_1;
+    always @(k, l, q, r) begin
+        if (ipu(r) == 0 || ipu(q) == 0) 
+            state_1 <= 1;
+        else if (ipu(k) == 0 || ipu(l) == 0)
+            state_1 <= 0;
+    end
 
-    // Bottom circuit
-    wire a_p = (a == 1) | (a === 1'bz);
-    wire g_p = (g == 1) | (g === 1'bz);
-    wire h_p = (h == 1) | (h === 1'bz);
+    // Curcuit 2
 
-    wire n4 = a_p & g_p & n6;
-    assign f = !n4;
-    wire n6 = !(f & h_p & r_p);
-    assign e = !n6;
-    assign d = !f;
-    
+    reg state_2;
+    assign e = !state_2;
+    assign f = !state_2;
+    assign d = state_2;
+    always @(a, g, r, h) begin
+        if (ipu(r) == 0 || ipu(h) == 0) 
+            state_2 <= 1;
+        else if (ipu(a) == 0 || ipu(g) == 0)
+            state_2 <= 0;
+    end
+
+    initial begin 
+        state_1 <= 1;
+        state_2 <= 1;
+    end
+   
 endmodule 

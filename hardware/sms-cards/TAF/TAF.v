@@ -19,7 +19,7 @@ module  SMS_CARD_TAF(output c, output d);
         // Constant clock
         // We are assuming a timestep of 1ns.  This gives a 1 MHz frequency with 
         // a 20% duty cycle. There's nothing special about 20% - it's arbitrary.  
-        #800 clk = 1; 
-        #200 clk = 0;
+        #8 clk = 1; 
+        #2 clk = 0;
     end
 endmodule

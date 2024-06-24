@@ -53,6 +53,10 @@ d11 t1_b gnd diodeGS
 q3   b  t3_b gnd pnp039
 q1   p  t1_b gnd pnp039
 
+* Proxy for parasitic capacitors
+cx0 b gnd 50p
+cx1 p gnd 50p
+
 * Base-collector cross-link
 r10 t3_b p 4.7k
 r28 t1_b b 4.7k
