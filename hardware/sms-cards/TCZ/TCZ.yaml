@@ -53,3 +53,5 @@ pins:
   R:
     type: INPUT
     name: "*R"
+  X: 
+    type: SYSCLOCK

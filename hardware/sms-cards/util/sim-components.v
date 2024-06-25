@@ -37,9 +37,9 @@ module SMS_CARD_RST(
     assign b = !a;
     // Reset signals starts low
     initial begin
-        a = 0;
-        // Hold for a 1us
-        #1
+        a <= 0;
+        // Hold
+        #20
         // Release high
         a <= 1;
     end
