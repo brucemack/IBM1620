@@ -10,10 +10,13 @@ pins:
     type: OUTPUT
     drivetype: AH_PD
     cir: 4
+  B: 
+    type: INPUT
+    cir: 3    
   C:
     type: PASSIVE
     tie: VN12
-    cir: 1
+    cir: 3
   D:
     type: OUTPUT
     name: "O2"

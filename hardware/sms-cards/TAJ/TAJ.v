@@ -41,8 +41,8 @@ module  SMS_CARD_TAJ(
     assign ac_set_right_0 = q;
     assign gate_right_0 = r;
 
-
-    always @(posedge(x)) begin
+    always @(posedge(x), posedge(ac_set_left_0), posedge(ac_set_left_1), 
+      posedge(ac_set_right_0), posedge(ac_set_right_1)) begin
         if (reset_left == 0)
             state <= 1;
         else if (reset_right == 0)
