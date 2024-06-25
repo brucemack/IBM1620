@@ -50,6 +50,7 @@ pins:
     cir: 1
   L:
     type: PASSIVE
+    tie: VN12
     name: "O2R"
     cir: 2
   M:

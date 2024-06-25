@@ -23,26 +23,37 @@ module  SMS_CARD_TAJ(
     input x
     );
 
-    wire ac_set_left_0, gate_left_0, ac_set_right_0, gate_right_0;
-    wire ac_set_left_1, gate_left_1, ac_set_right_1, gate_right_1;
-    wire reset_left, reset_right;
+    wire reset_left = h;
+    wire reset_right = c;
+    wire gate_left_0 = a;
+    wire gate_left_1 = e;
+    wire gate_right_0 = r;
+    wire gate_right_1 = k;
+
     reg state;
+    reg ac_set_left_0;
+    reg ac_set_left_1;
+    reg ac_set_right_0;
+    reg ac_set_right_1;
 
-    assign gate_left_0 = a;
+    // Capture the leading edge of the AC inputs
+    always @(posedge(d)) begin 
+        ac_set_left_0 <= d;
+    end
+    always @(posedge(f)) begin 
+        ac_set_left_1 <= f;
+    end
+    always @(posedge(q)) begin 
+        ac_set_right_0 <= q;
+    end
+    always @(posedge(l)) begin 
+        ac_set_right_1 <= l;
+    end
+
     assign b = state;
-    assign reset_right = c;
-    assign ac_set_left_0 = d;
-    assign gate_left_1 = e;
-    assign ac_set_left_1 = f;
-    assign reset_left = h;
-    assign gate_right_1 = k;
-    assign ac_set_right_1 = l;
     assign p = !state;
-    assign ac_set_right_0 = q;
-    assign gate_right_0 = r;
 
-    always @(posedge(x), posedge(ac_set_left_0), posedge(ac_set_left_1), 
-      posedge(ac_set_right_0), posedge(ac_set_right_1)) begin
+    always @(posedge(x)) begin
         if (reset_left == 0)
             state <= 1;
         else if (reset_right == 0)
@@ -53,59 +64,19 @@ module  SMS_CARD_TAJ(
         else if ((ac_set_right_0 === 1 & gate_right_0 === 1) |
                  (ac_set_right_1 === 1 & gate_right_1 === 1))
             state <= 1;
+        // Clear all AC controls
+        ac_set_left_0 <= 0;
+        ac_set_left_1 <= 0;
+        ac_set_right_0 <= 0;
+        ac_set_right_1 <= 0;
     end
 
     initial begin 
-
         state <= 1;
-        /*
-        reset_left = 1'bz;
-        reset_right = 1'bz;
-
-        #1
-        // Won't do anything, gate isn't opened
-        ac_set_left_0 = 1;
-        ac_set_left_0 = 0;
-        $display("Step 1: 0: [%0t] b: %0d p: %0d", $time, b, p);
-        #1
-        // Won't do anything, need rising edge of AC set
-        gate_left_0 = 1;
-        gate_left_0 = 0;
-        $display("Step 2: 0: [%0t] b: %0d p: %0d", $time, b, p);
-        #1
-        // Open gate
-        gate_left_0 = 1;
-        // Generate a left pulse
-        ac_set_left_0 = 1;
-        ac_set_left_0 = 0;
-        #1
-        // Now we'll see the change
-        $display("Step 3: 0: [%0t] b: %0d p: %0d", $time, b, p);
-        #1
-        // Generate a right pulse
-        ac_set_right_0 = 1;
-        ac_set_right_0 = 0;
-        #1
-        // No change
-        $display("Step 4: 0: [%0t] b: %0d p: %0d", $time, b, p);
-        // Open gate
-        gate_right_0 = 1;
-        // Generate a right pulse
-        ac_set_right_0 = 1;
-        ac_set_right_0 = 0;
-        #1
-        // Change
-        $display("Step 5: 0: [%0t] b: %0d p: %0d", $time, b, p);
-        #1
-        // Test reset
-        reset_right = 0;
-        reset_right = 1'bz;
-        #1
-        // Change
-        $display("Step 6: 0: [%0t] b: %0d p: %0d", $time, b, p);
-
-        #20 $stop;
-        */
+        ac_set_left_0 <= 0;
+        ac_set_left_1 <= 0;
+        ac_set_right_0 <= 0;
+        ac_set_right_1 <= 0;
     end 
 
 endmodule;

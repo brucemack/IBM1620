@@ -25,14 +25,14 @@ module  SMS_CARD_TAH(
 
     function ipu(input x);
         begin
-            ipu = (x == 1 || x === 1'bz) ? 1 : 0;
+            ipu = (x == 1 | x === 1'bz) ? 1 : 0;
         end
     endfunction
 
-    assign d = (!ipu(r) || !ipu(q) || !ipu(p));
-    assign e = (!ipu(a) || !ipu(b) || !ipu(k));
+    assign d = (!ipu(r) | !ipu(q) | !ipu(p));
+    assign e = (!ipu(a) | !ipu(b) | !ipu(k));
     // This pin has no pull down.  If transistor is off then the output floats
-    assign c = (!ipu(a) || !ipu(b) || !ipu(k)) ? 1 : 1'bz;
+    assign c = (!ipu(h) | !ipu(g) | !ipu(f)) ? 1 : 1'bz;
 
 endmodule
 

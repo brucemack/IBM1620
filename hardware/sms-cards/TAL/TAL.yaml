@@ -6,19 +6,21 @@ description: "SDTRL-Generator, Sample Pulse"
 function: "One Shot"
 pins:
   A:
-    type: UNKNOWN
+    type: PASSIVE
+    tie: VN12
     name: "PDR"
   B:
-    type: UNKNOWN
+    type: INPUT
     name: "CAP"
   C:
     type: INPUT
     name: "I1"
   D:
     type: OUTPUT
+    drivetype: AH_PD
     name: "O1"
   E:
-    type: UNKNOWN
+    type: INPUT
     name: "PDD"
   F:
     type: NC
@@ -53,3 +55,6 @@ pins:
   R:
     type: NC
     name: ""
+  X:
+    type: SYSCLOCK
+    
