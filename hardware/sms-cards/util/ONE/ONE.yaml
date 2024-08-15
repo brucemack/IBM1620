@@ -6,3 +6,5 @@ pins:
   A:
     type: OUTPUT
     name: "ONE"
+    drivetype: AH
+    note: "Active pull up"

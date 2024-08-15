@@ -1,0 +1,7 @@
+# IBM 1620 Logic Reproduction Project
+code: IND
+description: "Indicator"
+pins:
+  A:
+    type: INPUT
+

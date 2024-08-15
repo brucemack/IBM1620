@@ -1,11 +1,9 @@
 # IBM 1620 Logic Reproduction Project
-code: ZERO
-description: "Logic ZERO"
-function: "Logic ZERO"
+code: RST
+description: "Reset"
 pins:
   A:
     type: OUTPUT
-    name: "ZERO"
     drivetype: AL
     note: "Active pull down"
 
