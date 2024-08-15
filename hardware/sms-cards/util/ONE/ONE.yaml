@@ -1,0 +1,8 @@
+# IBM 1620 Logic Reproduction Project
+code: ONE
+description: "Logic ONE"
+function: "Logic ONE"
+pins:
+  A:
+    type: OUTPUT
+    name: "ONE"

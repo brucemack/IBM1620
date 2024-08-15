@@ -1,0 +1,8 @@
+# IBM 1620 Logic Reproduction Project
+code: ZERO
+description: "Logic ZERO"
+function: "Logic ZERO"
+pins:
+  A:
+    type: OUTPUT
+    name: "ZERO"

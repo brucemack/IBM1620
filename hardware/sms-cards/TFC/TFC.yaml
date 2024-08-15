@@ -12,7 +12,8 @@ pins:
     type: INPUT
     name: "I3"
   C:
-    type: OUTPUT
+    type: PASSIVE
+    tie: VN12
     name: "O3R"
   D:
     type: OUTPUT
@@ -51,5 +52,6 @@ pins:
     type: NC
     name: ""
   R:
-    type: OUTPUT
+    type: PASSIVE
+    tie: VN12
     name: "O1R"
