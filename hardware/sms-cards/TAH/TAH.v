@@ -20,7 +20,9 @@ module  SMS_CARD_TAH(
     input h, 
     input g,
     input f,
-    output c
+    output c,
+    // Passive pull down
+    output l
     );
 
     function ipu(input x);
@@ -33,6 +35,8 @@ module  SMS_CARD_TAH(
     assign e = (!ipu(a) | !ipu(b) | !ipu(k));
     // This pin has no pull down.  If transistor is off then the output floats
     assign c = (!ipu(h) | !ipu(g) | !ipu(f)) ? 1 : 1'bz;
+
+    pulldown p1(l);
 
 endmodule
 

@@ -10,7 +10,7 @@ module  SMS_CARD_ONE(
     output a 
     );
 
-    a = 1;
+    assign a = 1'b1;
 
 endmodule
 
@@ -18,7 +18,7 @@ module  SMS_CARD_ZERO(
     output a 
     );
 
-    a = 0;
+    assign a = 1'b0;
 
 endmodule
 

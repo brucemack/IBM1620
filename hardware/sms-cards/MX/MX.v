@@ -19,7 +19,9 @@ module SMS_CARD_MX(
     output k,
     output p,
     input q,
-    input r
+    input r,
+    // Passive pull-down
+    output l
     );
 
     function ipu(input x);
@@ -34,6 +36,8 @@ module SMS_CARD_MX(
     assign k = (ipu(q) == 0 || ipu(r) == 0) ? 1 : 0;
     // There is no pull down here - P floats when transistor is off
     assign p = (ipu(a) == 0 || ipu(h) == 0) ? 1 : 1'bz;
+
+    pulldown p1(l);
 
 endmodule
 

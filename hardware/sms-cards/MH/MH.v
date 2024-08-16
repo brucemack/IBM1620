@@ -12,7 +12,9 @@ module SMS_CARD_MH(
     input f, 
     input k,
     output l,
-    input p
+    input p,
+    // Pull down
+    output c
     );
 
     // Represents a pulled up input
